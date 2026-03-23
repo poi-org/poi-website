@@ -1,0 +1,243 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>POI</title>\
+  <style>\
+    :root \{\
+      --main-purple: #5411A6;\
+      --yellow: #F5D96B; /* softened yellow */\
+      --sub-purple: #BFCAFF;\
+      --white: #ffffff;\
+      --black: #000000;\
+    \}\
+\
+    * \{\
+      margin: 0;\
+      padding: 0;\
+      box-sizing: border-box;\
+      font-family: "Georgia", "Times New Roman", serif;\
+    \}\
+\
+    body \{\
+      background-color: var(--white);\
+      color: var(--black);\
+    \}\
+\
+    header \{\
+      background-color: var(--main-purple);\
+      color: var(--white);\
+      padding: 20px 40px;\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: center;\
+    \}\
+\
+    nav a \{\
+      color: var(--white);\
+      margin-left: 25px;\
+      text-decoration: none;\
+      font-weight: bold;\
+      transition: opacity 0.3s;\
+    \}\
+\
+    nav a:hover \{ opacity: 0.7; \}\
+\
+    .hero \{\
+      background-color: var(--yellow);\
+      padding: 80px 20px;\
+      text-align: center;\
+      animation: fadeIn 1s ease-in-out;\
+    \}\
+\
+    .hero img \{\
+      max-width: 120px;\
+      margin-bottom: 20px;\
+    \}\
+\
+    .hero h2 \{\
+      font-size: 42px;\
+      color: var(--main-purple);\
+      margin-bottom: 10px;\
+    \}\
+\
+    .container \{\
+      padding: 50px 20px;\
+      max-width: 1000px;\
+      margin: auto;\
+    \}\
+\
+    .card \{\
+      background: var(--white);\
+      border-left: 6px solid var(--main-purple);\
+      border-radius: 10px;\
+      padding: 25px;\
+      margin-bottom: 25px;\
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);\
+      animation: slideUp 0.6s ease;\
+    \}\
+\
+    .card img \{\
+      width: 100%;\
+      border-radius: 8px;\
+      margin-bottom: 15px;\
+    \}\
+\
+    .card h3 \{\
+      color: var(--main-purple);\
+      margin-bottom: 10px;\
+    \}\
+\
+    form input \{\
+      width: 100%;\
+      padding: 10px;\
+      margin-top: 10px;\
+      margin-bottom: 15px;\
+      border: 1px solid #ccc;\
+      border-radius: 6px;\
+    \}\
+\
+    button \{\
+      background-color: var(--main-purple);\
+      color: var(--white);\
+      padding: 10px 20px;\
+      border: none;\
+      border-radius: 6px;\
+      cursor: pointer;\
+      transition: background 0.3s;\
+    \}\
+\
+    button:hover \{ background-color: var(--black); \}\
+\
+    footer \{\
+      background-color: var(--main-purple);\
+      color: var(--white);\
+      text-align: center;\
+      padding: 20px;\
+      margin-top: 40px;\
+    \}\
+\
+    .page \{ display: none; \}\
+    .active \{ display: block; animation: fadeIn 0.6s ease; \}\
+\
+    @keyframes fadeIn \{ from \{ opacity: 0; \} to \{ opacity: 1; \} \}\
+    @keyframes slideUp \{ from \{ transform: translateY(20px); opacity: 0; \} to \{ transform: translateY(0); opacity: 1; \} \}\
+  </style>\
+\
+  <script>\
+    function showPage(pageId) \{\
+      const pages = document.querySelectorAll('.page');\
+      pages.forEach(p => p.classList.remove('active'));\
+      document.getElementById(pageId).classList.add('active');\
+    \}\
+\
+    window.onload = () => showPage('home');\
+  </script>\
+</head>\
+<body>\
+\
+  <header>\
+    <h1>POI</h1>\
+    <nav>\
+      <a href="#" onclick="showPage('home')">Home</a>\
+      <a href="#" onclick="showPage('about')">About</a>\
+      <a href="#" onclick="showPage('contact')">Contact</a>\
+    </nav>\
+  </header>\
+\
+  <!-- HOME -->\
+  <section id="home" class="page">\
+    <div class="hero">\
+      <!-- Add logo here -->\
+      <img src="logo.png" alt="POI Logo">\
+      <h2>Welcome to POI</h2>\
+      <p>Building confident speakers through debate.</p>\
+    </div>\
+\
+    <div class="container">\
+      <div class="card">\
+        <!-- Example image -->\
+        <img src="webinar.jpg" alt="Webinar">\
+        <h3>Online Skills Webinar</h3>\
+        <p>\
+          Learn the skills needed to begin debating through structured 45 minute online webinars.\
+        </p>\
+\
+        <h4>Sign Up</h4>\
+        <form>\
+          <input type="text" placeholder="Name" required>\
+          <input type="email" placeholder="Email" required>\
+          <input type="number" placeholder="Age" required>\
+          <input type="text" placeholder="How did you hear about us?">\
+          <button type="submit">Register</button>\
+        </form>\
+      </div>\
+\
+      <div class="card">\
+        <img src="debate.jpg" alt="Debate">\
+        <h3>In-Person Debate</h3>\
+        <p>\
+          Put your skills into practice in friendly debates judged by experienced debaters.\
+        </p>\
+\
+        <h4>Sign Up</h4>\
+        <form>\
+          <input type="text" placeholder="Name" required>\
+          <input type="email" placeholder="Email" required>\
+          <input type="number" placeholder="Age" required>\
+          <input type="text" placeholder="How did you hear about us?">\
+          <button type="submit">Register</button>\
+        </form>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- ABOUT -->\
+  <section id="about" class="page">\
+    <div class="container">\
+      <div class="card">\
+        <h3>About POI</h3>\
+        <p>\
+          POI was started to bridge the gap in debate and give students access to public speaking skills.\
+        </p>\
+        <br>\
+        <p>\
+          Founded by Alison and Maria of Oxford High School, inspired by their own experience in debate.\
+        </p>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- CONTACT -->\
+  <section id="contact" class="page">\
+    <div class="container">\
+      <div class="card">\
+        <h3>Contact Us</h3>\
+        <p>Email: info@poi.org.uk</p>\
+\
+        <h4>General Enquiry</h4>\
+        <form>\
+          <input type="text" placeholder="Name" required>\
+          <input type="email" placeholder="Email" required>\
+          <input type="text" placeholder="Message">\
+          <button type="submit">Send</button>\
+        </form>\
+      </div>\
+    </div>\
+  </section>\
+\
+  <footer>\
+    <p>\'a9 2026 POI | poi.org.uk</p>\
+  </footer>\
+\
+</body>\
+</html>\
+}
